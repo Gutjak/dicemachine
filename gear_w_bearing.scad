@@ -12,7 +12,7 @@ tooth_step = 21.35; // measured space between teeth
 dip = 3.4; // radius of dip
 
 thickness = 14; // how broad it is
-bearing = 10; // outer diameter of ball bearing
+bearing = 10.2; // outer diameter of ball bearing
 
 iso = (1/n * (n-2) * 180)/2; // Calculater the angles of an polygon with n sides and takes half of that
 out_r = tooth_step / (2*cos(iso)); // Use angle and distance between dips to calculate the sides of an isosceles triangle
