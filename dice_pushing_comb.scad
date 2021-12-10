@@ -16,11 +16,11 @@ hole_start = frame + dice/2 + guide_rail; //8.7
 for (hole=[hole_start : guide_rail_step : inner_box_width]) {
     translate([hole-dice/6, -1, 0])
         rotate([270,0,0])
-        cylinder(h=1+dice + dice*((hole-hole_start)/guide_rail_step), d=dice/3);
+        cylinder(h=1*dice + dice*((hole-hole_start)/guide_rail_step), d=dice/3);
 }
 
 pushing_box = inner_box_width; // x and y
-thickness = 8;
+thickness = 10;
 
 bearing = 10.4;
 
@@ -28,9 +28,9 @@ difference(){
     translate([0, -pushing_box/2, -thickness/2])
     cube([pushing_box, pushing_box/2, thickness]);
 
-    translate([2.5, -20, -thickness/2+2])
-        cube([pushing_box-5, bearing, thickness]);
+    translate([35, -20, -thickness/2+2])
+        cube([pushing_box+5, bearing, thickness]);
 
-    translate([pushing_box/4, -15, -thickness/2-2])
-        cylinder(h=thickness, d=6);
+    translate([35, -14.8, -thickness/2+2])
+        cylinder(h=thickness, d=bearing);
 }
